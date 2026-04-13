@@ -1,0 +1,88 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+body {
+  @apply bg-base-300 flex flex-col;
+}
+
+.header {
+  @apply bg-base-300 p-5 justify-center flex gap-10;
+}
+
+form input[type="text"],
+form input[type="date"] {
+  @apply p-2 rounded-md border border-gray-300;
+}
+
+
+/* ------------------------ */
+/* Flight Cards (results.html) */
+/* ------------------------ */
+
+#results {
+  @apply flex flex-col gap-10 mt-20;
+}
+
+.flight-card {
+  @apply border border-gray-300 rounded-lg p-4 flex justify-between items-center bg-warning text-warning-content shadow-lg transform transition duration-200;
+}
+
+.flight-info {
+  @apply flex flex-col gap-10;
+}
+
+.flight-price {
+  @apply font-bold text-lg mb-2;
+}
+
+.flight-btn {
+  @apply btn btn-primary cursor-pointer;
+}
+
+.flight-btn:hover {
+  @apply hover:-translate-y-1 transition;
+}
+
+/* ------------------------ */
+/* Seat Selection (seats.html) */
+/* ------------------------ */
+
+#seats {
+  @apply grid grid-cols-7 gap-3 justify-center mt-20;
+}
+
+.seat-btn {
+  @apply p-2 rounded-md bg-warning cursor-pointer hover:-translate-y-1 transition;
+}
+
+.booked {
+  @apply bg-error cursor-not-allowed;
+}
+
+.selected {
+  @apply bg-primary text-white;
+}
+
+/* ------------------------ */
+/* Booking Page (booking.html) */
+/* ------------------------ */
+
+#passengerName {
+  @apply p-2 rounded-md;
+}
+
+/* ------------------------ */
+/* Bookings Page (bookings.html) */
+/* ------------------------ */
+
+#bookings {
+  @apply flex flex-col gap-10 mt-10;
+}
+
+.bookings-card {
+  @apply rounded-lg py-5 px-10 bg-warning text-warning-content flex justify-between items-center shadow-lg;
+}
+
+#bookings div button {
+  @apply btn btn-primary hover:-translate-y-1 transition duration-200;
+}
